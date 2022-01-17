@@ -1,1 +1,2 @@
-print((15+45+88+100)/4)
+import math
+print(math.factorial(100))
