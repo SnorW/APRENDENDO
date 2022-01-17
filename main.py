@@ -1,3 +1,1 @@
-for x in range(1, 100):
-    print('Oi')
-print("Fim")
+print((15+45+88+100)/4)
