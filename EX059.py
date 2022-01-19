@@ -1,8 +1,9 @@
-condicao = 0
+condicao = True
+num1 = int(input('Digite o primeiro valor'))
+num2 = int(input('Digite o segundo valor'))
 
-while condicao == 0:
-    num1 = int(input('Digite o primeiro valor'))
-    num2 = int(input('Digite o segundo valor'))
+while condicao:
+    print('=-' * 20)
     pergunta = int(input('''Escolha uma opção:
 [1] Para somar
 [2] Para multiplicar
@@ -19,7 +20,10 @@ while condicao == 0:
         elif num2 > num1:
             print('O valor {} é maior que o valor {}'.format(num2, num1))
     elif pergunta == 4:
-        continue
+        print('Informe os numeros novamente')
+        condicao = True
     elif pergunta == 5:
         print('Obrigado e saindo!')
-        condicao += 1
+        condicao = False
+    else:
+        print("Opção inválida, digite entre [1] e [5]")

@@ -1,17 +1,27 @@
-from math import factorial
-num1 = int(input('Digite um valor: '))
-multiplicador = num1
-fatorial = 0
-resultado = 0
+import time
+# Código maior para deixar intuitivo
+num = int(input('Digite um valor: '))
+numeros = num - 2
+soma_multiplicao_anterior = num * (num - 1)
+soma_multiplicao_proxima = soma_multiplicao_anterior
 
-while multiplicador >= 2:
-    multiplicador -= 1
-    resultado = num1 * multiplicador
-    print('{} * {} = {}'.format(num1, multiplicador, resultado))
-    if fatorial == 0:
-        fatorial = num1 * multiplicador
-    elif fatorial > 0:
-        fatorial *= multiplicador
+print('Calulando {}!'.format(num))
+time.sleep(0.8)
+if num != 1:
+    print('{} * {} = {}'.format(num, num - 1, soma_multiplicao_proxima))
+elif num == 1:
+    print('1 * 1 = 1')
+while numeros > 0:
+    if num != 1:
+        time.sleep(0.4)
+        soma_multiplicao_proxima *= numeros
+        print('{} * {} = {}'.format(soma_multiplicao_anterior, numeros, soma_multiplicao_proxima))
+        soma_multiplicao_anterior = soma_multiplicao_proxima
+        numeros -= 1
 
-print('O fatorial de {} é {}'.format(num1, fatorial))
-print(factorial(num1))
+if num != 1:
+    time.sleep(0.8)
+    print('O fatorial de {} é igual a {}'.format(num, soma_multiplicao_proxima))
+elif num == 1:
+    time.sleep(0.4)
+    print('O fatorial de 1 é igual a 1')

@@ -10,11 +10,10 @@ while user_resposta != nrandom:
     user_resposta = pergunta
     user_cont += 1
     user_palpites.append(pergunta)
-    if pergunta != nrandom:
-        print('Você errou, tente novamente!')
-
-palpites = str(user_palpites)
-','.join(palpites)
-print('Parabéns você acertou com {} tentativas'.format(user_cont))
+    if pergunta > nrandom:
+        print('Menos! tente novamente!')
+    elif pergunta < nrandom:
+        print('Mais! tente novamente!')
+print('Parabéns você acertou com {} tentativas'.format(len(user_palpites)))
 print('O numero sorteado foi {}'.format(user_resposta, nrandom))
 print(user_palpites)
