@@ -11,7 +11,7 @@ while condicaowhile:
     print('-='*50)
     idade = int(input('Por favor digite o ano que você nasceu'))
     sexo = str(input('Por favor digite seu sexo: M/F')).strip().lower()
-    print('-='*50)
+    print('-='*100)
     if sexo in 'mf':
         if 0 < ano_atual - idade < 100:
             if ano_atual - idade > 18:

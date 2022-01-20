@@ -10,7 +10,7 @@ print('='*15, 'Bem-vindo ao menu da loja', '='*15)
 
 while condicaowhile_principal:
     nome_produto = str(input('Digite o nome o produto: ')).strip().lower()
-    valor_produto = float(input('Digite o valor do produto: '))
+    valor_produto = float(input('Digite o valor do produto R$: '))
     total_compra += valor_produto
     print('=-' * 30)
     if valor_produto < menor_valor:
