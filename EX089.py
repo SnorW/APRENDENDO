@@ -28,9 +28,9 @@ while condicao_while:
     alunosenotas.clear()
 
 print('-'*25)
-print(f'{"No.":<5}', f'{"Nome":^5}', f'{"Média":>15}')
+print(f'{"No.":<5}', f'{"Nome":<10}', f'{"Média":>5}')
 for x in range(0, len(lista_alunos_notas)):
-    print(f'{x:<5}', f'{lista_alunos_notas[x][0]:^5}', f'{lista_alunos_notas[x][2]:>15.2f}')
+    print(f'{x:<5}', f'{lista_alunos_notas[x][0]:<10}', f'{lista_alunos_notas[x][2]:>5.2f}')
 
 condicao_while = True
 while condicao_while:
