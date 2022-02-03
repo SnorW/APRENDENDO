@@ -30,18 +30,20 @@ while condicao_while:
 
 print(f'{dados_jogadores}')
 print('=-'*30)
-print(f'{"Código":<5}', f'{"Nome":<10}', f'{"Gols":<10}', f'{"Total de gols":<10}')
+print(f'{"Código":<5}', f'{"Nome":<10}', f'{"Gols":<15}', f'{"Total de gols":<20}')
 for x in range(0, len(dados_jogadores)):
-    print(f'{x+1:<5}', f'{dados_jogadores[x]["Nome"]:<10}', f'{str(dados_jogadores[x]["Gols"]):<10}', f'{sum(dados_jogadores[x]["Gols"]):<10}')
+    print(f'{x+1:<5}', f'{dados_jogadores[x]["Nome"]:<10}', f'{str(dados_jogadores[x]["Gols"]):<15}', f'{sum(dados_jogadores[x]["Gols"]):<20}')
 
 while True:
-    print('=-' * 30)
-    perg = int(input('Deseja ver os dados de algum jogador, se sim digite o seu código: '))
+    print('=-'*30)
+    perg = int(input('Digite o codigo do jogador para ver as suas informações (999 para fechar o programa)'))
+    print('=-'*30)
+    print(f'Levantamento do jogador {dados_jogadores[perg-1]["Nome"]}')
     if perg-1 in range(0, len(dados_jogadores)):
         for x in range(0, len(dados_jogadores[perg-1]["Gols"])):
             print(f'No jogo N°{x+1} fez {dados_jogadores[perg-1]["Gols"][x]}')
     elif perg == 999:
         break
     else:
-        print('Jogador inválido!')
+        print(f'Jogador {perg} inválido!')
 print('Programa finalizado, obrigado!')
