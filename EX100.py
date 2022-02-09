@@ -19,6 +19,8 @@ def somaPares(lst):
             soma_pares += v
     print(f'A soma dos valores pares é: {soma_pares}')
 
+
 lista = []
 sorteio(lista)
 somaPares(lista)
+print(lista)
